@@ -1,0 +1,15 @@
+{
+  "name": "password-cracker",
+  "version": "1.0.0",
+  "description": "A simple password cracker",
+  "main": "server.py",
+  "scripts": {
+    "start": "python3 generate_results.py && python3 server.py"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "repository": {
+    "url": "https://ari-sha1-password-cracker.glitch.me"
+  }
+}
