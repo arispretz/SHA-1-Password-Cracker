@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Cracker Results</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: black;
+            color: orange;
+            justify-content: center;
+            border: 5px solid crimson;
+        }
+    </style>
+</head>
+<body>
+    <h1>Password Cracker Results</h1>
+    <pre id="results"></pre>
+    <script>
+        fetch('/results')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('results').innerHTML = data;
+            })
+            .catch(error => {
+                document.getElementById('results').innerText = `Error: ${error.message}`;
+            });
+    </script>
+</body>
+</html>
